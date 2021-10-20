@@ -1,0 +1,20 @@
+ALGORITHM Insertion_sort
+VAR
+    n : integer
+    tab : Array_Of_integer[n]
+BEGIN
+    Read (n)
+ For i From 0 to n-1 Do 
+    read (tab[i])
+ END_For
+ For i From 0 to n-1 Do 
+    var j = i-1;
+    var current = tab[i]
+ WHILE (j>=0 and current<tab[j]) DO
+     tab[j+1] = tab[j];
+     j = j-1
+ END_WHILE
+ tab[j+1] = current;
+ END_For
+  write(tab)
+END
